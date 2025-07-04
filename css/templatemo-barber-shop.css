@@ -966,8 +966,22 @@ strong {
     background-color: var(--dark-color);
   }
 
+  /* Navbar centering for mobile */
+  .navbar-brand {
+    width: 100%; /* Make it take full width */
+    text-align: center; /* Center its content */
+    margin-right: 0; /* Remove any auto margin that might push it */
+  }
+
   .navbar-expand-lg .navbar-nav {
     padding-bottom: 30px;
+    padding-left: 0; /* Ensure no left padding */
+    margin-left: auto !important; /* Force center alignment */
+    margin-right: auto !important; /* Force center alignment */
+    float: none; /* Remove float if any */
+    display: block; /* Ensure it behaves as a block for text-align */
+    text-align: center; /* Center the navigation links */
+    width: 100%; /* Ensure it takes full width for centering */
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -1066,6 +1080,34 @@ strong {
   .custom-btn {
     font-size: 12px;
     padding: 8px 15px;
+  }
+
+  /* Hero section image and custom block centering for small phones */
+  .hero-section .custom-block {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0; /* Reset left property */
+    right: 0; /* Reset right property */
+    transform: none; /* Remove any rotation that might offset centering */
+  }
+
+  .hero-section .custom-block-image {
+    position: static; /* Ensure it flows naturally within its parent */
+    transform: none; /* Remove any rotation that might offset centering */
+  }
+
+  /* Footer adjustments for small phones */
+  .s-footer .footer-top .column,
+  .s-footer .footer-bottom {
+    text-align: center; /* Ensure all text is centered */
+  }
+  .s-footer .footer-list {
+    text-align: center; /* Center the list items */
+  }
+  .s-footer .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Ensure it's a block element for auto margins to work */
   }
 }
 
