@@ -971,6 +971,9 @@ strong {
     width: 100%; /* Make it take full width */
     text-align: center; /* Center its content */
     margin-right: 0; /* Remove any auto margin that might push it */
+    display: flex; /* Use flexbox for vertical and horizontal centering of logo and text */
+    justify-content: center;
+    align-items: center;
   }
 
   .navbar-expand-lg .navbar-nav {
@@ -982,6 +985,11 @@ strong {
     display: block; /* Ensure it behaves as a block for text-align */
     text-align: center; /* Center the navigation links */
     width: 100%; /* Ensure it takes full width for centering */
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-item {
+    width: 100%; /* Ensure each nav item takes full width for centering */
+    text-align: center; /* Center the text within each nav item */
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -1094,6 +1102,8 @@ strong {
   .hero-section .custom-block-image {
     position: static; /* Ensure it flows naturally within its parent */
     transform: none; /* Remove any rotation that might offset centering */
+    margin: 0 auto; /* Center the image within the custom-block */
+    display: block; /* Ensure it's a block element for auto margins */
   }
 
   /* Footer adjustments for small phones */
@@ -1103,10 +1113,10 @@ strong {
   }
   .s-footer .footer-list {
     text-align: center; /* Center the list items */
+    padding-left: 0; /* Remove default padding for list */
   }
   .s-footer .footer-logo {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto; /* Center the logo container */
     display: block; /* Ensure it's a block element for auto margins to work */
   }
 }
@@ -1223,8 +1233,9 @@ strong {
 }
 
 .about-us-content .p-4.bg-light .btn-primary:hover {
-  background-color: var(--custom-btn-bg-hover-color);
-  border-color: var(--custom-btn-bg-hover-color);
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white on hover */
+  border-color: rgba(255, 255, 255, 0.9);
+  color: var(--link-hover-color); /* Darker text on hover */
 }
 
 /* Ensure images in cards are responsive and have consistent styling */
