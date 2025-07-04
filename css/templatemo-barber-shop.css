@@ -727,6 +727,8 @@ strong {
   .s-footer .large-5 {
     width: 100%;
     margin-bottom: 30px; /* Spacing between columns on smaller screens */
+    padding: 0 10px; /* Reduced horizontal padding for better expansion */
+    text-align: center; /* Center content within these columns */
   }
 }
 
