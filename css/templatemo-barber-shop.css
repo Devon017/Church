@@ -275,15 +275,15 @@ strong {
 .navbar-toggler {
   background: var(--primary-color);
   border-radius: var(--border-radius-large);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  /* Changed from fixed to absolute, relative to its parent .navbar */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 15px; /* Adjust as needed */
+  transform: translateY(-50%); /* Pull back up by half its height */
   z-index: 222;
   border: 0;
   padding: 0;
   cursor: pointer;
-  margin: 25px;
   width: 55px;
   height: 55px;
   outline: none;
@@ -1116,10 +1116,20 @@ strong {
   .s-footer .footer-list {
     text-align: center; /* Center the list items */
     padding-left: 0; /* Remove default padding for list */
+    width: 100%; /* Ensure it takes full width */
   }
   .s-footer .footer-logo {
     margin: 0 auto; /* Center the logo container */
     display: block; /* Ensure it's a block element for auto margins to work */
+  }
+  .s-footer .column.large-half .row {
+    flex-direction: column; /* Stack the inner columns of large-half */
+    align-items: center; /* Center items in the stacked columns */
+  }
+  .s-footer .column.large-7,
+  .s-footer .column.large-5 {
+    width: 100%; /* Make them take full width when stacked */
+    padding: 0 15px; /* Add some padding back */
   }
 }
 
