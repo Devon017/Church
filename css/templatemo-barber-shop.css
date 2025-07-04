@@ -41,7 +41,7 @@ https://templatemo.com/tm-585-barber-shop
   --font-weight-thin:             200;
   --font-weight-light:            300;
   --font-weight-normal:           400;
-  --font-weight-bold:             700;
+  --font-weight-bold:           700;
 }
 
 body {
@@ -529,40 +529,53 @@ strong {
 }
 
 
-/*---------------------------------------
-  PRICE LIST             
------------------------------------------*/
 .price-list-section {
   padding-top: 100px;
   padding-bottom: 100px;
+  text-align: center; /* Center all text */
 }
 
 .price-list-thumb-wrap {
-  padding-right: 50px;
+  padding: 0; /* Remove right padding */
+  margin: 0 auto; /* Center the block */
+  max-width: 700px; /* Optional: control width */
 }
 
 .price-list-thumb {
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; /* Center horizontal alignment */
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 
-.price-list-thumb:last-child {
-  margin-bottom: 0;
+.price-list-thumb h6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  font-size: 1.1rem;
+}
+
+.price-list-thumb-divider {
+  flex: 1;
+  height: 1px;
+  background-color: var(--p-color);
+  margin: 0 10px;
 }
 
 .price-list-thumb h6 strong {
   color: var(--primary-color);
-}
-
-.price-list-thumb-divider {
-  background: var(--p-color);
-  flex: auto;
-  height: 2px;
-  margin: auto 15px 0;
+  white-space: nowrap;
 }
 
 .price-list-section .custom-block-bg-overlay-wrap {
   padding: 0;
+  margin-top: 30px;
 }
+
 
 
 /*---------------------------------------
@@ -669,7 +682,169 @@ strong {
 /*---------------------------------------
   SITE FOOTER              
 -----------------------------------------*/
-.site-footer {
+/* New Footer Styles */
+.s-footer {
+  background-color: #1a1a1a; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 80px 50px 30px; /* Adjust padding as needed */
+  position: relative;
+}
+
+.s-footer .footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.s-footer .column {
+  padding: 0 15px; /* Add some horizontal padding */
+}
+
+.s-footer .large-4 {
+  width: 33.33%;
+}
+
+.s-footer .large-half {
+  width: 66.66%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.s-footer .large-7 {
+  width: 58.33%; /* Approx 7/12 */
+}
+
+.s-footer .large-5 {
+  width: 41.67%; /* Approx 5/12 */
+}
+
+@media (max-width: 991px) { /* Medium devices */
+  .s-footer .large-4,
+  .s-footer .large-half,
+  .s-footer .large-7,
+  .s-footer .large-5 {
+    width: 100%;
+    margin-bottom: 30px; /* Spacing between columns on smaller screens */
+  }
+}
+
+.s-footer .footer-logo {
+  margin-bottom: 20px;
+}
+
+.s-footer .footer-logo img {
+  height: 40px; /* Ensure logo height is consistent */
+  width: auto;
+}
+
+.s-footer p {
+  color: rgba(255, 255, 255, 0.7); /* Lighter text for paragraphs */
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.s-footer h4.h6 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.s-footer .footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.s-footer .footer-list li {
+  margin-bottom: 10px;
+}
+
+.s-footer .footer-list a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.s-footer .footer-list a:hover {
+  color: #FDBB2D; /* Hover color for links */
+}
+
+.s-footer .btn--footer {
+  background-color: #FDBB2D; /* Button background */
+  color: #1a1a1a; /* Button text color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.s-footer .btn--footer:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+  color: #ffffff;
+}
+
+.s-footer .footer-bottom {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.s-footer .ss-copyright span {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.s-footer .ss-copyright a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+}
+
+.s-footer .ss-copyright a:hover {
+  color: #FDBB2D;
+}
+
+.s-footer .ss-go-top {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.s-footer .ss-go-top a {
+  display: block;
+  background-color: #FDBB2D;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #1a1a1a;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.s-footer .ss-go-top a:hover {
+  background-color: #e0a800;
+}
+
+.s-footer .ss-go-top svg {
+  vertical-align: middle;
+  fill: currentColor; /* Ensures SVG color matches text color */
+}
+
+
+/* Existing Styles (kept for other sections) */
+.site-footer { /* This rule is now largely overridden by .s-footer */
   position: relative;
   padding: 80px 50px;
   padding-top: 0;
@@ -678,12 +853,12 @@ strong {
 .site-footer::after {
   content: "";
   background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
-  position: absolute;
+  position: center;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 10px;
+  height: 15px;
 }
 
 .site-footer-links {
@@ -693,7 +868,7 @@ strong {
 .site-footer-link-item {
   list-style: none;
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 18px;
 }
 
 .site-footer strong {
@@ -809,6 +984,29 @@ strong {
     font-size: 14px;
     padding: 10px 20px;
   }
+
+  /* Adjust font sizes for medium screens (tablets in portrait, larger phones) */
+  h1 {
+    font-size: 48px; /* Smaller h1 */
+  }
+  h2 {
+    font-size: 32px; /* Smaller h2 */
+  }
+  h3 {
+    font-size: 28px; /* Smaller h3 */
+  }
+  h4 {
+    font-size: 24px; /* Smaller h4 */
+  }
+  h5 {
+    font-size: 18px; /* Smaller h5 */
+  }
+  h6 {
+    font-size: 16px; /* Smaller h6 */
+  }
+  p, ul li {
+    font-size: 16px; /* Smaller paragraph and list item text */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -839,5 +1037,452 @@ strong {
   .booking-form {
     padding: 35px;
   }
+
+  /* Further adjust font sizes for small screens (phones) */
+  h1 {
+    font-size: 36px; /* Even smaller h1 for phones */
+  }
+  h2 {
+    font-size: 26px; /* Even smaller h2 */
+  }
+  h3 {
+    font-size: 24px; /* Even smaller h3 */
+  }
+  h4 {
+    font-size: 20px; /* Even smaller h4 */
+  }
+  h5 {
+    font-size: 16px; /* Even smaller h5 */
+  }
+  h6 {
+    font-size: 14px; /* Even smaller h6 */
+  }
+  p, ul li {
+    font-size: 14px; /* Even smaller paragraph and list item text */
+  }
+  .lead { /* Adjust lead paragraph specifically */
+    font-size: 16px !important;
+  }
+  .custom-btn {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
 }
 
+/* === Custom Styles === */
+
+/* Custom active link color for sticky navbar */
+.navbar-nav .nav-link.active {
+  color: #FDBB2D !important;
+  font-weight: bold;
+  border-bottom: 2px solid #FDBB2D;
+}
+
+/* Optional: hover effect for better UX */
+.navbar-nav .nav-link:hover {
+  color: #FDBB2D !important;
+}
+
+#section_5 {
+  margin-bottom: 100px; /* Extra space before Contact */
+}
+
+#section_6 iframe {
+  border: none;
+  width: 100%;
+  height: 300px;
+}
+
+/* Styles for ministries.html content */
+.services-section .card,
+.about-section .card {
+  border: none; /* Remove default border */
+  border-radius: var(--border-radius-medium); /* Apply consistent border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.services-section .card:hover,
+.about-section .card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.services-section .card-body h4,
+.about-section .card-body h4 {
+  color: var(--primary-color); /* Highlight card titles */
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 15px;
+}
+
+.services-section .card-body ul,
+.about-section .card-body ul {
+  list-style: none; /* Remove default bullet points */
+  padding-left: 0; /* Remove default padding */
+}
+
+.services-section .card-body ul li,
+.about-section .card-body ul li {
+  margin-bottom: 8px;
+  color: var(--p-color); /* Consistent paragraph color */
+}
+
+.services-section .card-body ul li strong,
+.about-section .card-body ul li strong {
+  color: var(--dark-color); /* Make strong text stand out */
+}
+
+/* Styling for the Learn More button in ministries section */
+.services-section .card-body .custom-btn {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
+}
+
+.services-section .card-body .custom-btn:hover {
+  background-color: var(--custom-btn-bg-hover-color);
+  border-color: var(--custom-btn-bg-hover-color);
+}
+
+/* Adjustments for section headings */
+.services-section h2.display-5,
+.about-section h2.display-5 {
+  color: var(--dark-color); /* Ensure headings are dark and prominent */
+  margin-bottom: 20px;
+}
+
+.services-section p.lead,
+.about-section p.lead {
+  color: var(--p-color);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Specific styling for the "Life Groups" callout in about.html */
+.about-us-content .p-4.bg-light {
+  background-color: var(--section-bg-color) !important; /* Use a lighter background variable */
+  border-radius: var(--border-radius-medium);
+  padding: 30px !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.about-us-content .p-4.bg-light h4 {
+  color: var(--primary-color);
+}
+
+.about-us-content .p-4.bg-light .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 25px;
+  border-radius: var(--border-radius-large);
+  transition: all 0.3s ease;
+}
+
+.about-us-content .p-4.bg-light .btn-primary:hover {
+  background-color: var(--custom-btn-bg-hover-color);
+  border-color: var(--custom-btn-bg-hover-color);
+}
+
+/* Ensure images in cards are responsive and have consistent styling */
+.card-img-top {
+  border-top-left-radius: var(--border-radius-medium);
+  border-top-right-radius: var(--border-radius-medium);
+  object-fit: cover;
+  height: 180px; /* Consistent height for card images */
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .services-section .card-body h4,
+  .about-section .card-body h4 {
+    font-size: 24px; /* Adjust title size for smaller screens */
+  }
+
+  .services-section .card-body ul li,
+  .about-section .card-body ul li {
+    font-size: 18px; /* Adjust list item font size */
+  }
+}
+
+/* Specific styles for about.html content alignment and spacing */
+.about-us-content {
+  background-color: var(--white-color); /* Changed to white */
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: var(--dark-color); /* Changed text color to dark for contrast */
+}
+
+.about-us-content h2.display-5 {
+  color: var(--dark-color); /* Ensure heading is dark */
+  margin-bottom: 40px; /* More space below the main heading */
+}
+
+.about-us-content .lead {
+  color: var(--p-color); /* Darker text for lead paragraph */
+  max-width: 900px; /* Slightly wider lead paragraph */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px; /* More space below the lead paragraph */
+}
+
+.about-us-content .h4.fw-bold.mb-3 {
+  color: var(--primary-color); /* Highlight these sub-headings */
+  margin-bottom: 20px !important; /* Adjust margin for sub-headings like Vision, Mission, Leadership */
+}
+
+.about-us-content ul.list-unstyled li {
+  margin-bottom: 10px; /* Space between list items */
+  color: var(--p-color); /* Darker text for list items */
+}
+
+.about-us-content .border-bottom {
+  border-color: rgba(0, 0, 0, 0.1) !important; /* Lighter border for separation */
+  margin-bottom: 40px; /* Space below the border */
+}
+
+.about-us-content .row.mt-5 {
+  margin-top: 80px !important; /* Increase top margin for sections like Core Beliefs */
+}
+
+/* Core Beliefs Card Specific Styling */
+.about-us-content .card {
+  background-color: var(--white-color); /* Changed to white for cards */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle border for cards */
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Enhanced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px; /* Consistent margin between cards */
+  text-align: center; /* Center content within cards */
+  overflow: hidden; /* Ensure nothing overflows rounded corners */
+}
+
+.about-us-content .card:hover {
+  transform: translateY(-8px); /* More pronounced lift on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.about-us-content .card-img-top {
+  height: 120px; /* Smaller, more icon-like images */
+  width: 120px; /* Fixed width for square images */
+  border-radius: 50%; /* Make images circular */
+  object-fit: cover;
+  margin: 20px auto 15px auto; /* Center circular images and add margin */
+  border: 3px solid var(--primary-color); /* Add a border to the circular image */
+}
+
+.about-us-content .card-body {
+  padding: 20px; /* Adjust padding inside cards */
+}
+
+.about-us-content .card-title {
+  color: var(--dark-color); /* Ensure title is clear */
+  font-weight: var(--font-weight-bold);
+  font-size: 22px; /* Slightly larger title */
+  margin-bottom: 10px;
+}
+
+.about-us-content .card-text {
+  color: var(--p-color); /* Darker text for card content */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Life Groups Callout Styling */
+.about-us-content .p-4.bg-light {
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--custom-btn-bg-hover-color) 100%) !important; /* Gradient background */
+  color: var(--white-color); /* White text for contrast */
+  padding: 40px !important; /* More padding */
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Stronger shadow */
+  margin-top: 60px; /* Space from previous section */
+}
+
+.about-us-content .p-4.bg-light h4 {
+  color: var(--white-color); /* Ensure heading is white */
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.about-us-content .p-4.bg-light p {
+  color: rgba(255, 255, 255, 0.8); /* Lighter paragraph text */
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.about-us-content .p-4.bg-light .btn-primary {
+  background-color: var(--white-color); /* White button */
+  border-color: var(--white-color);
+  color: var(--primary-color); /* Primary color text */
+  font-weight: var(--font-weight-bold);
+  padding: 12px 30px;
+  border-radius: var(--border-radius-large);
+}
+
+.about-us-content .p-4.bg-light .btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white on hover */
+  border-color: rgba(255, 255, 255, 0.9);
+  color: var(--link-hover-color); /* Darker text on hover */
+}
+
+/* Responsive adjustments for about.html */
+@media screen and (max-width: 991px) {
+  .about-us-content .card-img-top {
+    height: 100px;
+    width: 100px;
+  }
+  .about-us-content .card-title {
+    font-size: 20px;
+  }
+  .about-us-content .card-text {
+    font-size: 15px;
+  }
+  .about-us-content .p-4.bg-light {
+    padding: 30px !important;
+  }
+  .about-us-content .p-4.bg-light h4 {
+    font-size: 24px;
+  }
+  .about-us-content .p-4.bg-light p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-us-content h2.display-5 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .about-us-content .lead {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .about-us-content .h4.fw-bold.mb-3 {
+    font-size: 24px;
+    margin-bottom: 15px !important;
+  }
+  .about-us-content .card-img-top {
+    height: 80px;
+    width: 80px;
+  }
+  .about-us-content .card-title {
+    font-size: 18px;
+  }
+  .about-us-content .card-text {
+    font-size: 14px;
+  }
+  .about-us-content .p-4.bg-light h4 {
+    font-size: 22px;
+  }
+  .about-us-content .p-4.bg-light p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-us-content h2.display-5 {
+    font-size: 30px;
+  }
+  .about-us-content .lead {
+    font-size: 16px;
+  }
+  .about-us-content .h4.fw-bold.mb-3 {
+    font-size: 20px;
+  }
+  .about-us-content .card-img-top {
+    height: 70px;
+    width: 70px;
+  }
+  .about-us-content .card-title {
+    font-size: 16px;
+  }
+  .about-us-content .card-text {
+    font-size: 13px;
+  }
+  .about-us-content .p-4.bg-light h4 {
+    font-size: 20px;
+  }
+  .about-us-content .p-4.bg-light p {
+    font-size: 14px;
+  }
+}
+
+/* Specific styles for index.html responsiveness */
+
+/* Hero Section adjustments */
+.hero-section {
+  padding: 80px 20px; /* Adjust padding for smaller screens */
+  min-height: 500px; /* Ensure minimum height */
+}
+
+.hero-section .hero-section-text {
+  text-align: center; /* Center text on smaller screens */
+}
+
+.hero-section .custom-block {
+  position: static; /* Remove absolute positioning on small screens */
+  margin: 40px auto 0; /* Center and add top margin */
+  width: 250px; /* Adjust size for smaller screens */
+  height: 250px;
+  padding: 30px; /* Adjust padding */
+  border: 5px solid var(--primary-color); /* Adjust border thickness */
+}
+
+.hero-section .custom-block-image {
+  width: 80px; /* Adjust logo size within the circle */
+  height: 80px;
+  top: -40px; /* Adjust position */
+  left: 0;
+  right: 0;
+}
+
+/* About Section adjustments */
+.about-section .row {
+  justify-content: center; /* Center content within the row */
+}
+
+.about-section .custom-block-bg-overlay-wrap {
+  margin-bottom: 30px; /* Add space between value cards on small screens */
+}
+
+/* Sermons Section adjustments */
+.featured-section .card {
+  margin-bottom: 20px; /* Add space between sermon cards on small screens */
+}
+
+/* Offerings Section adjustments */
+.booking-section .booking-form {
+  padding: 30px; /* Adjust form padding for smaller screens */
+}
+
+.booking-section .form-control {
+  margin-bottom: 15px; /* Adjust spacing between form fields */
+}
+
+/* Footer adjustments */
+.s-footer .footer-top .column {
+  margin-bottom: 30px; /* Add spacing between footer columns on small screens */
+  text-align: center; /* Center footer content on small screens */
+}
+
+.s-footer .footer-bottom {
+  flex-direction: column; /* Stack copyright and back-to-top on small screens */
+  text-align: center;
+}
+
+.s-footer .ss-copyright span {
+  margin-right: 0;
+  margin-bottom: 10px; /* Space between copyright lines */
+}
+
+.s-footer .ss-go-top {
+  position: static; /* Remove absolute positioning */
+  margin-top: 20px; /* Add space above back-to-top button */
+}
+
+/* Ensure images in cards are responsive */
+.card-img-top {
+  max-width: 100%; /* Ensure images don't overflow */
+  height: auto; /* Maintain aspect ratio */
+}
