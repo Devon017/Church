@@ -276,6 +276,7 @@ strong {
 .navbar-toggler {
   background: var(--primary-color);
   border-radius: var(--border-radius-large);
+  /* Changed from fixed to absolute, relative to its parent .navbar */
   position: absolute;
   top: 50%; /* Center vertically */
   right: 15px; /* Adjust as needed */
@@ -966,15 +967,21 @@ strong {
   
   .navbar {
     background-color: var(--dark-color);
+    position: relative; /* Ensure it has a positioning context */
+    width: 100%; /* Ensure it takes full width */
+    display: flex; /* Make navbar a flex container */
+    justify-content: space-between; /* Push brand and toggler to ends */
+    align-items: center; /* Vertically align them */
+    padding: 10px 15px; /* Add some padding to the navbar itself */
   }
 
-  /* Navbar centering for mobile */
+  /* Navbar brand adjustments for mobile flex layout */
   .navbar-brand {
-    width: 100%; /* Make it take full width */
-    text-align: center; /* Center its content */
-    margin-right: 0; /* Remove any auto margin that might push it */
-    display: flex; /* Use flexbox for vertical and horizontal centering of logo and text */
-    justify-content: center;
+    width: auto; /* Let flex determine width */
+    margin-right: 0; /* Remove any pushing margin */
+    text-align: left; /* Align logo/text to left within brand */
+    flex-grow: 1; /* Allow it to grow and take space */
+    display: flex; /* Use flexbox for logo and text within brand */
     align-items: center;
   }
 
@@ -1000,6 +1007,27 @@ strong {
 
   .booking-form {
     padding: 45px;
+  }
+
+  /* Navbar Toggler adjustments for mobile flex layout */
+  .navbar-toggler {
+    position: static; /* Let flexbox position it */
+    transform: none; /* Remove previous transform */
+    margin: 0; /* Remove fixed margins */
+    z-index: 10000 !important; /* Even higher z-index to be absolutely sure */
+    right: auto; /* Remove explicit right positioning */
+    top: auto; /* Remove explicit top positioning */
+  }
+
+  /* Navbar Collapse adjustments for mobile */
+  .navbar-collapse {
+    position: absolute; /* Make the collapsible menu absolute */
+    top: 100%; /* Position it directly below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-color); /* Ensure background for the menu */
+    z-index: 9998; /* Lower than toggler, higher than content */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a subtle shadow */
   }
 }
 
