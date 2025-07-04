@@ -251,6 +251,7 @@ strong {
 .navbar {
   background: transparent;
   z-index: 9;
+  position: relative; /* Added to establish positioning context for absolute children */
 }
 
 .logo-image {
@@ -275,12 +276,11 @@ strong {
 .navbar-toggler {
   background: var(--primary-color);
   border-radius: var(--border-radius-large);
-  /* Changed from fixed to absolute, relative to its parent .navbar */
   position: absolute;
   top: 50%; /* Center vertically */
   right: 15px; /* Adjust as needed */
   transform: translateY(-50%); /* Pull back up by half its height */
-  z-index: 222;
+  z-index: 9999; /* Increased z-index to ensure it's on top */
   border: 0;
   padding: 0;
   cursor: pointer;
