@@ -1017,6 +1017,10 @@ strong {
     z-index: 10000 !important; /* Even higher z-index to be absolutely sure */
     right: auto; /* Remove explicit right positioning */
     top: auto; /* Remove explicit top positioning */
+    /* Ensure it's always visible and clickable */
+    display: block; /* Make sure it's not hidden by other rules */
+    opacity: 1; /* Make sure it's not transparent */
+    pointer-events: auto; /* Ensure it receives pointer events */
   }
 
   /* Navbar Collapse adjustments for mobile */
@@ -1028,6 +1032,15 @@ strong {
     background-color: var(--dark-color); /* Ensure background for the menu */
     z-index: 9998; /* Lower than toggler, higher than content */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Add a subtle shadow */
+    /* Explicitly hide when collapsed and manage transition */
+    max-height: 0; /* Hidden by default */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.3s ease-out; /* Smooth transition */
+  }
+
+  .navbar-collapse.show {
+    max-height: 500px; /* Or a sufficiently large value to show all content */
+    /* You might need to adjust this value based on actual content height */
   }
 }
 
@@ -1045,16 +1058,16 @@ strong {
     font-size: 32px; /* Smaller h2 */
   }
   h3 {
-    font-size: 28px; /* Smaller h3 */
+    font-size: 28px;
   }
   h4 {
-    font-size: 24px; /* Smaller h4 */
+    font-size: 24px;
   }
   h5 {
-    font-size: 18px; /* Smaller h5 */
+    font-size: 18px;
   }
   h6 {
-    font-size: 16px; /* Smaller h6 */
+    font-size: 16px;
   }
   p, ul li {
     font-size: 16px; /* Smaller paragraph and list item text */
@@ -1098,16 +1111,16 @@ strong {
     font-size: 26px; /* Even smaller h2 */
   }
   h3 {
-    font-size: 24px; /* Even smaller h3 */
+    font-size: 24px;
   }
   h4 {
-    font-size: 20px; /* Even smaller h4 */
+    font-size: 20px;
   }
   h5 {
-    font-size: 16px; /* Even smaller h5 */
+    font-size: 16px;
   }
   h6 {
-    font-size: 14px; /* Even smaller h6 */
+    font-size: 14px;
   }
   p, ul li {
     font-size: 14px; /* Even smaller paragraph and list item text */
