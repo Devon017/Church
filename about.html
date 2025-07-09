@@ -29,56 +29,53 @@
   </style>
 <body id="top" data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
 
- <header class="bg-dark shadow-sm sticky-top">
+<header class="bg-dark shadow-sm sticky-top">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark py-3">
+      <!-- Logo -->
       <a class="navbar-brand fw-bold" href="index.html" aria-label="ACK St. Stephen Ngoingwa Home">
         <img src="images/ACKNGOINGWACHURCH.jpg" alt="ACK St. Stephen Ngoingwa Church Logo" height="40" class="me-2">
         ACK St. Stephen Ngoingwa
       </a>
 
-      <!-- Mobile Toggler Button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Toggler button for offcanvas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Navbar Links -->
+      <!-- Desktop menu -->
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
 
-          <!-- Dropdown Menu for About -->
+          <!-- Dropdown for About -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               About Us
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item nav-link" href="#about-intro">Introduction</a></li>
-              <li><a class="dropdown-item nav-link" href="#ack-overview">ACK Overview</a></li>
-              <li><a class="dropdown-item nav-link" href="#our-vision">Our Vision</a></li>
-              <li><a class="dropdown-item nav-link" href="#our-mission">Our Mission</a></li>
-              <li><a class="dropdown-item nav-link" href="#church-leadership">Church Leadership</a></li>
-              <li><a class="dropdown-item nav-link" href="#church-council">Church Council</a></li>
-              <li><a class="dropdown-item nav-link" href="#core-beliefs">Core Beliefs</a></li>
-              <li><a class="dropdown-item nav-link" href="#life-groups">Life Groups</a></li>
+              <li><a class="dropdown-item" href="#about-intro">Introduction</a></li>
+              <li><a class="dropdown-item" href="#ack-overview">ACK Overview</a></li>
+              <li><a class="dropdown-item" href="#our-vision">Our Vision</a></li>
+              <li><a class="dropdown-item" href="#our-mission">Our Mission</a></li>
+              <li><a class="dropdown-item" href="#church-leadership">Church Leadership</a></li>
+              <li><a class="dropdown-item" href="#church-council">Church Council</a></li>
+              <li><a class="dropdown-item" href="#core-beliefs">Core Beliefs</a></li>
+              <li><a class="dropdown-item" href="#life-groups">Life Groups</a></li>
             </ul>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="ministries.html">Ministries</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="index.html#section_4">Sermons</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="index.html#section_5">Offerings</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="contact.html#section_6">Contact</a>
           </li>
@@ -87,23 +84,25 @@
     </nav>
   </div>
 </header>
-   
-  <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
-      <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link text-white smoothscroll" href="#section_1" data-bs-dismiss="offcanvas">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="ministries.html">Ministries</a></li>
-        <li class="nav-item"><a class="nav-link text-white smoothscroll" href="#section_4" data-bs-dismiss="offcanvas">Sermons</a></li>
-        <li class="nav-item"><a class="nav-link text-white smoothscroll" href="#section_5" data-bs-dismiss="offcanvas">Offerings</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+
+<!-- Offcanvas Mobile Menu -->
+<div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-warning fw-bold" href="about.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="ministries.html">Ministries</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="index.html#section_4">Sermons</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="index.html#section_5">Offerings</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
 
   <main>
     <!-- About Introduction Section -->
