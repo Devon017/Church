@@ -422,7 +422,17 @@
         </div> <!-- ss-go-top -->
 
     </footer> <!-- end s-footer -->
-  <script>
+ <!-- Load Bootstrap first -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- Then your other scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/click-scroll.js"></script>
+<script src="js/custom.js"></script>
+
+<!-- Then your custom Bootstrap-dependent script -->
+<script>
   document.querySelectorAll('.navbar-nav .nav-link').forEach(function (link) {
     link.addEventListener('click', function () {
       const navbarCollapse = document.querySelector('#mainNavbar');
@@ -434,9 +444,5 @@
   });
 </script>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/click-scroll.js"></script>
-  <script src="js/custom.js"></script>
 </body>
 </html>
