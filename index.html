@@ -26,43 +26,51 @@
 
  <header class="bg-dark shadow-sm sticky-top">
   <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark py-3">
-      <a class="navbar-brand fw-bold" href="index.html">
+    <!-- Begin Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-3" id="mainNavbar">
+
+      <!-- Brand -->
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
         <img src="images/logo.png" alt="ACK Logo" height="40" class="me-2">
-        ACK St. Stephen Ngoingwa
+        <span class="d-none d-sm-inline">ACK St. Stephen Ngoingwa</span>
+        <span class="d-inline d-sm-none">ACK St. Stephen</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Toggler Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarCollapse"
+        aria-controls="mainNavbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Collapsible Nav Links -->
+      <div class="collapse navbar-collapse" id="mainNavbarCollapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link smoothscroll" href="#section_1">Home</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link smoothscroll" href="about.html">About Us</a>
+            <a class="nav-link" href="about.html">About Us</a>
           </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="ministries.html">Ministries</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ministries.html">Ministries</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link smoothscroll" href="#section_4">Sermons</a>
           </li>
           <li class="nav-item">
             <a class="nav-link smoothscroll" href="#section_5">Offerings</a>
           </li>
-            <li class="nav-item">
-              <a class="nav-link smoothscroll" href="contact.html">Contact</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
         </ul>
       </div>
+
     </nav>
+    <!-- End Navbar -->
   </div>
 </header>
+
 
 
   <main>
