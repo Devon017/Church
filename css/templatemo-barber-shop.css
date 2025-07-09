@@ -1,10 +1,3 @@
-/*
-
-TemplateMo 585 Barber Shop
-
-https://templatemo.com/tm-585-barber-shop
-
-*/
 
 
 /*---------------------------------------
@@ -1591,4 +1584,12 @@ strong {
 .card-img-top {
   max-width: 100%; /* Ensure images don't overflow */
   height: auto; /* Maintain aspect ratio */
+}
+/* Custom offcanvas width */
+.offcanvas-end {
+  width: 250px !important; /* or adjust to your preferred width */
+}
+.offcanvas-body .nav-link {
+  padding: 10px 0;
+  font-size: 16px;
 }
