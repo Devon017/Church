@@ -23,6 +23,54 @@
       font-weight: bold;
     }
   </style>
+  <style>
+    /* Adjust navbar brand font size for mobile */
+    @media (max-width: 576px) {
+      .navbar-brand {
+        font-size: 1rem !important;
+      }
+    }
+
+    /* Custom dark style for contact tiles */
+    .contact-block {
+      background-color: #2e2e2e !important; /* Dark gray */
+      color: #ffffff !important;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: rotate(-2deg);
+      transition: all 0.3s ease;
+    }
+
+    .contact-block h6 {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .contact-block p {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #ccc;
+    }
+
+    .contact-block i.custom-icon {
+      background-color: #FDBB2D;
+      color: #2e2e2e;
+      padding: 15px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      font-size: 22px;
+      display: inline-block;
+    }
+
+    /* Active nav link highlight color */
+    .navbar-nav .nav-link.active {
+      color: #FDBB2D !important;
+      font-weight: 600;
+    }
+  </style>
+</head
+  
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="100" tabindex="0">
