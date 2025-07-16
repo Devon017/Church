@@ -23,54 +23,54 @@
       font-weight: bold;
     }
   </style>
-  <style>
-    /* Adjust navbar brand font size for mobile */
-    @media (max-width: 576px) {
-      .navbar-brand {
-        font-size: 1rem !important;
-      }
-    }
+ <style>
+  /* Responsive brand name size */
+  @media (max-width: 576px) {
+    .navbar-brand {
+      font-size: 1rem !important;
+    }
+  }
 
-    /* Custom single-color style for contact tiles */
-    .contact-block {
-      background-color: #FDBB2D !important; /* Gold Background */
-      color: #212529 !important; /* Dark text for contrast */
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transform: rotate(-2deg);
-      transition: all 0.3s ease;
-      width: 100%; /* Ensure block fills the wrapper */
-    }
+  /* Clean, unified contact block */
+  .contact-block {
+    background-color: #2e2e2e; /* Solid dark gray */
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transform: none; /* Remove tilt */
+  }
 
-    .contact-block h6 {
-      font-weight: 700;
-      color: #212529; /* Dark text */
-    }
+  .contact-block h6 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 15px;
+  }
 
-    .contact-block p {
-      margin-bottom: 8px;
-      font-size: 15px;
-      color: #212529; /* Dark text */
-    }
+  .contact-block p {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #cccccc;
+  }
 
-    .contact-block i.custom-icon {
-      /* Re-styled for single color theme */
-      background-color: transparent; /* No background */
-      color: #212529; /* Dark icon to match text */
-      padding: 0;
-      border-radius: 0;
-      margin-bottom: 15px;
-      font-size: 28px;
-      display: inline-block;
-    }
+  .contact-block i.custom-icon {
+    background-color: #FDBB2D; /* Highlight circle */
+    color: #2e2e2e;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
 
-    /* Active nav link highlight color */
-    .navbar-nav .nav-link.active {
-      color: #FDBB2D !important;
-      font-weight: 600;
-    }
-  </style>
+  /* Active nav link highlight */
+  .navbar-nav .nav-link.active {
+    color: #FDBB2D !important;
+    font-weight: 600;
+  }
+</style>
   
 </head>
 
