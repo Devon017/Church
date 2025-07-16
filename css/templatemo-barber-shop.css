@@ -597,48 +597,45 @@ strong {
   border-radius: var(--border-radius-medium);
   filter: hue-rotate(45deg);
 }
-    @media (max-width: 576px) {
-    .navbar-brand {
-    font-size: 1rem !important;
-  }
-  .contact-block {
-    background-color: #2e2e2e; /* Solid dark gray */
-    color: #ffffff;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transform: none; /* Remove tilt */
-  }
 
-  .contact-block h6 {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-top: 15px;
-  }
+.contact-block-wrap {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-medium);
+  padding: 0;
+  min-height: 200px;
+}
 
-  .contact-block p {
-    margin: 5px 0;
-    font-size: 15px;
-    color: #cccccc;
-  }
+.contact-block {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-medium);
+  transform: rotate(8deg);
+  height: 100%;
+  padding: 20px 40px;
+}
 
-  .contact-block i.custom-icon {
-    background-color: #FDBB2D; /* Highlight circle */
-    color: #2e2e2e;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 22px;
-    display: inline-block;
-    margin-bottom: 10px;
-  }
+.contact-block h6 {
+  transform: rotate(-8deg);
+}
 
-  /* Active nav link highlight */
-  .navbar-nav .nav-link.active {
-    color: #FDBB2D !important;
-    font-weight: 600;
-  }
+.contact-block .custom-icon {
+  background: var(--primary-color);
+  border-radius: var(--border-radius-large);
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.contact-block strong {
+  display: block;
+  color: var(--white-color);
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 
 /*---------------------------------------
   CUSTOM FORM               
